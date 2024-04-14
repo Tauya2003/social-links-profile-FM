@@ -1,6 +1,6 @@
 import { Avatar, Box, Button, Stack, Typography } from "@mui/material";
 import React from "react";
-import avatarImg from "../images/avatar-jessica.jpeg";
+import avatarImg from "../images/avatar-tauya.jpg";
 
 const Card = () => {
   return (
@@ -19,11 +19,11 @@ const Card = () => {
       <Typography
         sx={{ color: "#fff", fontSize: "1.5rem", mt: 3, fontWeight: 700 }}
       >
-        Jessica Randall
+        Tauya Mtowodzwa
       </Typography>
 
       <Typography sx={{ color: "hsl(75, 94%, 57%)", fontSize: "0.9rem" }}>
-        London, United States
+        Harare, Zimbabwe
       </Typography>
 
       <Typography
