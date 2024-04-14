@@ -33,26 +33,39 @@ const Card = () => {
       </Typography>
 
       <Stack direction={"column"} gap={1} mt={2.5} mb={3}>
-        {["Github", "Frontend Mentor", "LinkedIn", "Twitter", "Instagram"].map(
-          (item, index) => (
-            <Button
-              key={index}
-              sx={{
-                textTransform: "initial",
-                color: "#fff",
-                bgcolor: "hsl(0, 0%, 20%)",
-                width: 250,
+        {[
+          { name: "Github", link: "https://github.com/tauya2003" },
+          {
+            name: "Frontend Mentor",
+            link: "https://www.frontendmentor.io/profile/Tauya2003",
+          },
+          {
+            name: "LinkedIn",
+            link: "http://www.linkedin.com/in/tauyanashe-mtowodzwa/",
+          },
+          { name: "Twitter", link: "https://twitter.com/ayuat2003" },
+          { name: "Instagram", link: "https://www.instagram.com/tau.ya_/" },
+        ].map((item, index) => (
+          <Button
+            key={index}
+            onClick={() => {
+              window.open(item.link);
+            }}
+            sx={{
+              textTransform: "initial",
+              color: "#fff",
+              bgcolor: "hsl(0, 0%, 20%)",
+              width: 250,
 
-                "&:hover": {
-                  bgcolor: "hsl(75, 94%, 57%)",
-                  color: "hsl(0, 0%, 8%)",
-                },
-              }}
-            >
-              {item}
-            </Button>
-          )
-        )}
+              "&:hover": {
+                bgcolor: "hsl(75, 94%, 57%)",
+                color: "hsl(0, 0%, 8%)",
+              },
+            }}
+          >
+            {item.name}
+          </Button>
+        ))}
       </Stack>
     </Box>
   );
